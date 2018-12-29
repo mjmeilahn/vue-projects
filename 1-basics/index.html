@@ -9,24 +9,30 @@
   <script src="vue.js"></script>
 </head>
 <body>
+
+  <style>
+    #app {
+      margin: 30px auto;
+      max-width: 1200px;
+      width: 90%;
+    }
+  </style>
+
   <div id="app">
     <!-- Example 1: Hello World! -->
     <h1>{{ title }}</h1>
     <input type="text" @input="changeTitle">
     <p v-once>{{ sayHello() }}</p>
-
     <hr>
 
     <!-- Example 2: Fetch data via binding & output HTML -->
     <a :href="link" target="_blank">Google</a>
     <div v-html="htmlLink"></div>
-
     <hr>
 
     <!-- Example 3: Add an event listener -->
     <button @click="increase(2, 1)">Click me</button>
     <p>{{ counter }}</p>
-
     <hr>
 
     <!-- Example 4: Output x/y mouse coordinates -->
@@ -34,20 +40,17 @@
       {{ x }} / {{ y }}
       <span @mousemove.stop="">DEAD SPOT</span>
     </p>
-
     <hr>
 
     <!-- Example 5: Add keyup event listener -->
     <p>Enter text and hit "Enter"</p>
     <input type="text" @keyup.enter="alertMe" v-model="alertText">
-
     <hr>
 
     <!-- Example 6: Two-way data binding -->
     <p>Two-way binding</p>
     <input type="text" v-model="name">
     <h3>{{ name }}</h3>
-
     <hr>
 
     <!-- Example 7: Computed functions in action -->
@@ -56,7 +59,6 @@
     <button @click="secondCounter++">Increase</button>
     <button @click="secondCounter--">Decrease</button>
     <p>{{ output }}</p>
-
     <hr>
 
     <!-- Example 8: CSS classes & styles -->
@@ -69,6 +71,34 @@
     <section>
       <input type="text" v-model="color">
     </section>
+    <hr>
+
+    <!-- Example 9: v-if -->
+    <!-- You can pass JS inside v-if -->
+    <p v-if="show">You can see me.</p>
+    <p v-else>Now you can see me!</p>
+    <p>Do you also see me?</p>
+    <button @click="show = !show">SWITCH</button>
+    <hr>
+
+    <!-- Example 10: v-for with array -->
+    <!-- v-for just needs "ingredient in ingredients" but here we use (ingredient, i) to access the current index -->
+    <!-- Adding :key is optional but practical for Vue to keep track of arrays under the hood in its lifecycle -->
+    <ul>
+      <li v-for="(ingredient, i) in ingredients" :key="ingredient">{{ ingredient }} ({{ i + 1 }})</li>
+    </ul>
+    <hr>
+
+    <!-- Example 11: v-for with array of Objects -->
+    <ul>
+      <li v-for="person in persons">
+        <section v-for="(value, key) in person">
+          <div v-if="value !== undefined">
+              {{ key }} : {{ value }}
+          </div>
+        </section><br>
+      </li>
+    </ul>
   </div>
 
   <script>
@@ -85,7 +115,14 @@
         name: 'Matthew',
         secondCounter: 0,
         attachRed: false,
-        color: 'green'
+        color: 'green',
+        show: true,
+        ingredients: ['meat', 'fruit', 'cookies'],
+        persons: [
+          {name: 'Max', age: 27, color: 'red'},
+          {name: 'Anna', age: undefined, color: 'blue'},
+          {name: 'Matthew', age: 29, color: 'green'}
+        ]
       },
       computed: {
         output: function() {
