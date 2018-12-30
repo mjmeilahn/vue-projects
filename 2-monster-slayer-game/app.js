@@ -31,7 +31,7 @@ new Vue({
 
             // Show application state on Front End
             this.turns.unshift({
-                class: 'player-attack',
+                attack: true,
                 text: 'Player hits Monster for ' + damage
             });
 
@@ -53,7 +53,7 @@ new Vue({
 
             // Show application state on Front End
             this.turns.unshift({
-                class: 'player-heal',
+                heal: true,
                 text: 'Player heals for 10'
             });
 
@@ -77,7 +77,7 @@ new Vue({
 
             // Show application state on Front End
             this.turns.unshift({
-                class: 'monster-attack',
+                monster: true,
                 text: 'Monster hits Player for ' + damage
             });
         },

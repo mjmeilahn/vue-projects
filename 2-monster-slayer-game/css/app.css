@@ -35,17 +35,17 @@
     margin: 5px;
 }
 
-.log ul .player-attack {
+.log ul .attack {
     background-color: #e4e8ff;
     color: blue;
 }
 
-.log ul .player-heal {
+.log ul .heal {
     background-color: lightgreen;
     color: green;
 }
 
-.log ul .monster-attack {
+.log ul .monster{
     background-color: #ffc0c1;
     color: red;
 }

@@ -44,7 +44,7 @@
     <section class="row log" v-if="turns.length > 0">
         <div class="small-12 columns">
             <ul>
-                <li v-for="turn in turns" :class="{'player-attack': turn.class === 'player-attack', 'player-heal': turn.class === 'player-heal', 'monster-attack': turn.class === 'monster-attack'}">
+                <li v-for="turn in turns" :class="{'attack': turn.attack, 'heal': turn.heal, 'monster': turn.monster}">
                     {{ turn.text }}
                 </li>
             </ul>
