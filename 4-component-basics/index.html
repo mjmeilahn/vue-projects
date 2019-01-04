@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Vue Components</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="vue.js"></script>
+</head>
+<body>
+
+  <style>
+    #app,
+    #app2,
+    #app3,
+    #app4 {
+      margin: 30px auto;
+      max-width: 1200px;
+      width: 90%;
+    }
+
+    button {
+      background-color: blue;
+      color: white;
+      margin-left: 30px;
+      padding: 10px 30px;
+    }
+  </style>
+
+  <div id="app">
+    <global-component></global-component>
+    <hr>
+    <global-component></global-component>
+  </div>
+
+  <div id="app2">
+    <local-component></local-component>
+    <hr>
+    <local-component></local-component>
+  </div>
+
+  <script>
+    // Global Component Registration
+    Vue.component('global-component', {
+      data() {
+        return {
+          status: 'Normal'
+        }
+      },
+      methods: {
+        changeStatus() {
+          this.status = 'Changed!';
+        }
+      },
+      template: '<p>I\'m global, change this text: {{ status }} <button @click="changeStatus">Change</button></p>'
+    });
+
+    // Vue instance which shows any nested HTML components
+    // inside the instance, provided they are globally registered
+    new Vue({
+      el: '#app'
+    });
+
+
+
+    // Private / Local Component Registration, part 1
+    let cmp = {
+      data() {
+        return {
+          status: 'Normal'
+        }
+      },
+      methods: {
+        changeStatus() {
+          this.status = 'Changed!';
+        }
+      },
+      template: '<p>I\'m local, change this text: {{ status }} <button @click="changeStatus">Change</button></p>'
+    }
+
+    // Private / Local Component Registration, part 2
+    new Vue({
+      el: '#app2',
+      components: {
+        'local-component': cmp
+      }
+    });
+  </script>
+</body>
+</html>
