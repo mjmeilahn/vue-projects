@@ -8,3 +8,5 @@ One repo that contains a list of my Vue pet projects.
 3. Vue CLI - Basic setup using Vue's CLI, Webpack & SASS. Exploring folder structure and optimizations for deployment to a server.
 
 4. Component Basics - Creating reusable components, understanding Global vs. Private components. Shared vs. private state among components.
+
+5. Component Communication - 
