@@ -9,4 +9,4 @@ One repo that contains a list of my Vue pet projects.
 
 4. Component Basics - Creating reusable components, understanding Global vs. Private components. Shared vs. private state among components.
 
-5. Component Communication - 
+5. Component Communication - Updating sibling components from different parent via an event bus service. Exploring props through strict and non-strict type-checking.
