@@ -12,3 +12,5 @@ One repo that contains a list of my Vue pet projects.
 5. Component Communication - Updating sibling components from different parent via an event bus service. Exploring props through strict and non-strict type-checking.
 
 6. Advanced Components - Understanding Dynamic Components, their lifecycles and default state upon creation, slots, keep-alive, and component keywords.
+
+7. Wonderful Quotes - App that adds quotes via $emit, slots, and Vue click handlers: @click.prevent & @click.native
