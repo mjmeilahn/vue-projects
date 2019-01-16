@@ -14,3 +14,5 @@ One repo that contains a list of my Vue pet projects.
 6. Advanced Components - Understanding Dynamic Components, their lifecycles and default state upon creation, slots, keep-alive, and component keywords.
 
 7. Wonderful Quotes - App that adds quotes via $emit, slots, and Vue click handlers: @click.prevent & @click.native
+
+8. Forms - Exploring how Vue works with forms, submission handling via click.prevent, optimizing two way binding with v-model.lazy
