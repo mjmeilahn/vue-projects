@@ -17,4 +17,4 @@ One repo that contains a list of my Vue pet projects.
 
 8. Forms - Exploring how Vue works with forms, submission handling via click.prevent, optimizing two way binding with v-model.lazy
 
-9. Directives - Learning life-cycle methods like bind() and update for custom directives & how to modify through arguments passed in HTML by string or object.
+9. Directives - Learning life-cycle methods like bind and update for custom directives & how to modify through arguments passed in HTML by string or object.
