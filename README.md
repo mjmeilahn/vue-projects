@@ -20,3 +20,5 @@ One repo that contains a list of my Vue pet projects.
 9. Directives - Learning life-cycle methods like bind and update for custom directives & how to modify through arguments passed in HTML by string or object.
 
 10. Filters & Mixins - Understanding Filters vs. Computed properties, and what happens to rendered DOM in both approaches. Exploring mixins and their scope. Understanding why global mixins are usually bad in terms of performance.
+
+11. Animations - Understanding transition and transition-group elements and how they can be customized via CSS or JS animations. Lifecycle hooks explored in the JS side.
