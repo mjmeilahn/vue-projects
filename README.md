@@ -22,3 +22,5 @@ One repo that contains a list of my Vue pet projects.
 10. Filters & Mixins - Understanding Filters vs. Computed properties, and what happens to rendered DOM in both approaches. Exploring mixins and their scope. Understanding why global mixins are usually bad in terms of performance.
 
 11. Animations - Understanding transition and transition-group elements and how they can be customized via CSS or JS animations. Lifecycle hooks explored in the JS side.
+
+12. The Super Quiz - Applying animations from previous project to Math Quiz. A dynamic component holds Question & Answer components passed by reference. A right answer will trigger a transition with CSS keyframes. A wrong answer will trigger an alert.
