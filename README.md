@@ -24,3 +24,5 @@ One repo that contains a list of my Vue pet projects.
 11. Animations - Understanding transition and transition-group elements and how they can be customized via CSS or JS animations. Lifecycle hooks explored in the JS side.
 
 12. The Super Quiz - Applying animations from previous project to Math Quiz. A dynamic component holds Question & Answer components passed by reference. A right answer will trigger a transition with CSS keyframes. A wrong answer will trigger an alert.
+
+13. Vue-Resource / HTTP - Understanding vue-resource library and how its functions can send, format and intercept requests and responses. Exploring resource.save() shorthand and associated PROS and CONS.
