@@ -28,3 +28,5 @@ One repo that contains a list of my Vue pet projects.
 13. Vue-Resource / HTTP - Understanding vue-resource library and how its functions can send, format and intercept requests and responses. Exploring resource.save() shorthand compared to default $http methods.
 
 14. Vue-Router - Exploring common routing in a Vue application: Params, query strings, redirects, scrollTo, before and after entering a route, router-view animations, and lazy-loading Components via Webpack syntax
+
+15. Vuex - Understanding lifecycles of Vuex, with few similarities to Redux/Flux. Vuex uses a dispatcher to actions, then state mutation. A component will specify a getter under its own computed property. Exploring folder structure and how to break down Vuex for larger applications. Usage of Babel Presets ("stage-2") & package.json for spread operator.
