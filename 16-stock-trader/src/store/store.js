@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
+import { loadData } from './actions';
 import stocks from './modules/stocks';
 import portfolio from './modules/portfolio';
 
@@ -13,6 +14,9 @@ Vue.use(Vuex);
 // 5. COMPONENT HAS GETTERS TO FETCH NEW STATE VIA THEIR COMPUTED PROPERTY
 
 export default new Vuex.Store({
+    actions: {
+        loadData,
+    },
     modules: {
         stocks,
         portfolio,
