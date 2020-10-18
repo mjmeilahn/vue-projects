@@ -1,0 +1,14 @@
+{
+  "MainForm": {
+    "description": "Auto imported from components/MainForm.vue"
+  },
+  "LazyMainForm": {
+    "description": "Auto imported from components/MainForm.vue"
+  },
+  "Results": {
+    "description": "Auto imported from components/Results.vue"
+  },
+  "LazyResults": {
+    "description": "Auto imported from components/Results.vue"
+  }
+}
