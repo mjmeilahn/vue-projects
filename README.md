@@ -32,3 +32,5 @@ One repo that contains a list of my Vue pet projects.
 15. Vuex - Understanding lifecycles of Vuex, with few similarities to Redux/Flux. Vuex uses a dispatcher to actions, then state mutation. A component will specify a getter under its own computed property. Exploring folder structure and how to break down Vuex for larger applications. Usage of Babel Presets ("stage-2") & package.json for spread operator.
 
 16. Stock Trader - Combining previous lessons into one project. Vue resource, routing, Vuex, HTML v-tags and basic Firebase integration serving as initial state.
+
+17. Nuxt - Basic CLI installation with the Pick Shapes challenge. Simple component communication without Vuex for state management. Of the different types of Vue deployments Nuxt is better for SEO as it works in combination with Node for routing and rendering as if it is a server-side rendered web application. Limitations exist for Nuxt mainly concerning heavy traffic performance issues. If heavy traffic is expected, explore other server-side rendering options without the bloat of Nuxt.
