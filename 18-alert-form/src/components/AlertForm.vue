@@ -1,7 +1,7 @@
 <template>
-    <div class="alertForm">
+    <section class="alertForm">
         <h2 class="alertForm__heading">Email Alert</h2>
-        <section class="alertForm__inputs">
+        <div class="alertForm__inputs">
             <label class="alertForm__label" for="alertForm__message">
                 <span class="alertForm__label-text">Alert Message</span>
                 <input
@@ -15,7 +15,7 @@
             </label>
             <p v-if="invalid.message" class="alertForm__invalid">Invalid message.</p>
 
-            <section class="alertForm__radio-section">
+            <div class="alertForm__radios">
                 <div class="alertForm__radio-heading">Frequency</div>
                 <div class="alertForm__radio-inputs">
                     <label v-for="(frequency, freqIndex) in frequencies" :key="'frequency__' + freqIndex" class="alertForm__label alertForm__label-radio" :for="'alertForm__frequency-' + frequency">
@@ -31,7 +31,7 @@
                         <span>{{ frequency }}</span>
                     </label>
                 </div>
-            </section>
+            </div>
             <p v-if="invalid.frequency" class="alertForm__invalid">Invalid frequency.</p>
 
             <label class="alertForm__label" for="alertForm__recipients-input">
@@ -46,19 +46,19 @@
                 >
             </label>
             <p v-if="invalid.email" class="alertForm__invalid">Invalid email.</p>
-        </section>
-        <section class="alertForm__recipients">
+        </div>
+        <div class="alertForm__recipients">
             <div v-for="(recipient, recipientIndex) in recipients" :key="'recipient__' + recipientIndex" class="alertForm__recipient">
                 <div class="alertForm__recipient-email">{{ recipient }}</div>
                 <div @click="removeRecipient(recipientIndex)" class="alertForm__recipient-remove">x</div>
             </div>
-        </section>
-        <section class="alertForm__buttons">
+        </div>
+        <div class="alertForm__buttons">
             <button @click="testRecipients" class="alertForm__button-test">Test Alert</button>
             <button @click="saveRecipients" class="alertForm__button-save">Save</button>
-        </section>
+        </div>
         <p v-if="invalid.isInvalid" class="alertForm__invalid">Invalid Submission. Please review and correct your information.</p>
-    </div>
+    </section>
 </template>
 
 <script>
@@ -135,6 +135,7 @@ export default {
                 this.invalid.isInvalid = true
                 this.invalid.email = true
             }
+
             // VALIDATE MESSAGE
             if (message.length > 0 && message !== undefined && message !== null && typeof message === 'string') {
                 this.endpoint.message = message
@@ -144,6 +145,7 @@ export default {
                 this.invalid.isInvalid = true
                 this.invalid.message = true
             }
+
             // VALIDATE FREQUENCY
             if (this.frequencies.includes(frequency) && frequency !== undefined && frequency !== null && typeof frequency === 'string') {
                 this.endpoint.frequency = frequency
@@ -153,6 +155,7 @@ export default {
                 this.invalid.isInvalid = true
                 this.invalid.frequency = true
             }
+
             return this.invalid.isInvalid ? true : false
         },
         testRecipients() {
@@ -245,7 +248,7 @@ export default {
     }
 
     /* RADIO WRAPPERS */
-    .alertForm__radio-section {
+    .alertForm__radios {
         align-items: center;
         display: flex;
         flex-direction: row;
