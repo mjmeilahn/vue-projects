@@ -33,6 +33,6 @@ One repo that contains a list of my Vue pet projects.
 
 16. Stock Trader - Combining previous lessons into one project. Vue resource, routing, Vuex, HTML v-tags and basic Firebase integration serving as initial state.
 
-17. Nuxt - Basic CLI installation with the Pick Shapes challenge. Simple component communication without Vuex for state management. Of the different types of Vue deployments Nuxt is better for SEO as it works in combination with Node for routing and rendering as if it is a server-side rendered web application. Limitations exist for Nuxt mainly concerning heavy traffic performance issues. If heavy traffic is expected, explore other server-side rendering options without the bloat of Nuxt.
+17. Pick Shapes Challenge - Basic Nuxt installation with the Pick Shapes challenge. Simple component communication without Vuex for state management. Of the different types of Vue deployments Nuxt is better for SEO as it works in combination with Node for routing and rendering as if it is a server-side rendered web application. Limitations exist for Nuxt mainly concerning heavy traffic performance issues. If heavy traffic is expected, explore other server-side rendering options without the bloat of Nuxt.
 
-18. Alert Form - TBD.
+18. Alert Form - Captures user preferences to be notified through a single email or send emails to a wide array of recipients. String and email sanitation, also validation before logging the endpoint. CSS is BEM with semantic HTML.
