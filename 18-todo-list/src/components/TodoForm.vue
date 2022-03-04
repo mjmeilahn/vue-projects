@@ -106,7 +106,6 @@ export default {
         }
       },
       reset() {
-        event.preventDefault()
         this.todo.id = undefined
         this.todo.text = ''
         this.todo.priority = {}

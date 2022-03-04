@@ -2,8 +2,8 @@
   <div id="app">
     <h1 class="text-center">Todo</h1>
     <TodoForm
-      @addTodoItem="addTodoItem"
       :todo="todo"
+      @addTodoItem="addTodoItem"
     />
 
     <div v-if="todoItems.length > 0">
