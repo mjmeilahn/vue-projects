@@ -81,9 +81,10 @@
     <button @click="show = !show">SWITCH</button>
     <hr>
 
-    <!-- Example 10: v-for with array -->
-    <!-- v-for just needs "ingredient in ingredients" but here we use (ingredient, i) to access the current index -->
-    <!-- Adding :key is mandatory for Vue to keep track of arrays under the hood in its lifecycle -->
+    <!-- 
+    Example 10: v-for with array
+    v-for just needs "ingredient in ingredients" but here we use (ingredient, i) to access the current index. Adding :key is mandatory for Vue to keep track of arrays under the hood in its lifecycle.
+    -->
     <ul>
       <li v-for="(ingredient, i) in ingredients" :key="ingredient">{{ ingredient }} ({{ i + 1 }})</li>
     </ul>
