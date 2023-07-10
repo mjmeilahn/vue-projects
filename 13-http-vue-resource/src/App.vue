@@ -45,20 +45,18 @@
             submit() {
             // THERE ARE AT LEAST THREE WAYS TO SEND REQUESTS
             // 1. Using vue-resource $http, requires then and catch to resolve promises
-            // 2. resource.save() is a shorthand - can attach then and catch as needed
-            // 3. attach custom HTTP methods/urls in created() lifecycle for more routes in a short hand manner
-
-                // 1. vue-resource $http
-                // this.$http
+            // this.$http
                 //     // empty string because Vue HTTP options has the Firebase URL as its root in main.js
                 //     .post('data.json', this.user)
                 //     .then(res => console.log(res), err => console.log(err))
                 //     .catch(err => console.log(err));
 
-                // 2. Default resource.save();
-                this.resource.save({}, this.user);
 
-                // 3. Custom method/URL to pass data
+            // 2. resource.save() is a shorthand - can attach then and catch as needed
+            this.resource.save({}, this.user);
+
+
+            // 3. attach custom HTTP methods/urls in created() lifecycle for more routes in a short hand manner
                 // this.resource.saveAlt(this.user);
             },
             getData() {
